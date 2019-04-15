@@ -10,6 +10,7 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+      @recipe_ingredients = RecipeIngredient.all.select{ |ur| ur.recipe_id == params[:id].to_i}
   end
 
   # GET /recipes/new
