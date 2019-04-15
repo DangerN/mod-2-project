@@ -3,7 +3,12 @@
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
+  <ul>
+    <% UserRecipe.recipe_names(params[:id].to_i).each do |recipe| %>
+      <li><%= link_to "#{recipe}", recipe_path(Recipe.find_by(name: recipe))%></li>
+    <%end%>
+  </ul>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Edit', edit_user_path(@user) %>
 <%= link_to 'Back', users_path %>

@@ -16,9 +16,14 @@ Recipe.destroy_all
 crystal = User.create(name: 'Crystal')
 
 potato = Ingredient.create(name: 'Potato')
+cheese = Ingredient.create(name: 'Cheese')
+
 
 baked_potato = Recipe.create(name: 'Baked Potato', directions: 'Bake potato')
+baked_cheese = Recipe.create(name: 'Baked Cheese', directions: 'Bake cheese forever')
+
 
 RecipeIngredient.create(recipe: baked_potato, ingredient: potato)
 
 UserRecipe.create(user: crystal, recipe: baked_potato)
+UserRecipe.create(user: crystal, recipe: baked_cheese)

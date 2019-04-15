@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user_recipes = UserRecipe.all.select{ |ur| ur.user_id == params[:id].to_i}
   end
 
   # GET /users/new
