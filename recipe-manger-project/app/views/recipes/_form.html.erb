@@ -20,10 +20,6 @@
     <%= form.label :directions %>
     <%= form.text_area :directions %>
   </div>
-
-  <div class="table"
-    <%= form.collection_check_boxes :name, Ingredient.all, :id, :name %>
-    </div>
   <div class="actions">
     <%= form.submit %>
   </div>
