@@ -68,10 +68,16 @@ class RecipesController < ApplicationController
   end
 
   def change_recipe_ingredients
-    byebug
-    @inredient_ids = params[:ingredient][:name].reject(&:blank?).map{|e| e.to_i}
+    # byebug
+    @ingredient_ids = params[:ingredient][:name].reject(&:blank?).map{|e| e.to_i}
     @recipe_id = params[:id].to_i
-    
+    # byebug
+    # RecipeIngredient.find_each{|ri| ri.recipe_id == @recipe_id}.destroy_all
+    RecipeIngredient.where(recipe_id: "#{@recipe_id}").destroy_all
+    @ingredient_ids.each do |ing_id|
+      RecipeIngredient.create(ingredient_id: ing_id, recipe_id: @recipe_id)
+    end
+    redirect_to recipes_path
   end
 
   private
