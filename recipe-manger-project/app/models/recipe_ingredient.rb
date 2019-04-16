@@ -2,11 +2,13 @@ class RecipeIngredient < ApplicationRecord
   belongs_to :ingredient
   belongs_to :recipe
 
-  def ingredient
-    Ingredient.all.find{|ingredient| self.ingredient_id == ingredient.id}
+
+  def self.ingredient_names(recipe_id)
+    RecipeIngredient.all.select do |ri|
+      ri.recipe_id == recipe_id
+    end.map do |ri|
+      Ingredient.find(ri.ingredient_id).name
+    end
   end
 
-  def ingredient_name
-    ingredient.name
-  end
 end
