@@ -11,6 +11,11 @@
 
   <body>
     <%= yield %>
-    <footer><%= link_to "Recipes", recipes_path %> <%= link_to "Ingredients", ingredients_path %> <%= link_to "Users", users_path %></footer>
+   <footer>
+     <%= link_to "Recipes", recipes_path %>
+     <%= link_to "Ingredients", ingredients_path %>
+     <%= link_to "Users", users_path %>
+     <%= link_to "Analytics", analytics_path %>
+   </footer>
   </body>
 </html>
