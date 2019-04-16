@@ -62,6 +62,18 @@ class RecipesController < ApplicationController
     end
   end
 
+  def ingredients_form
+    @recipe = Recipe.find(params[:id])
+    @ingredients = Ingredient.all
+  end
+
+  def change_recipe_ingredients
+    byebug
+    @inredient_ids = params[:ingredient][:name].reject(&:blank?).map{|e| e.to_i}
+    @recipe_id = params[:id].to_i
+    
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
