@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Analytics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    Analytic stuff goes on this page <br>
+    - Show total number of Users:<%= @user_count %> <br>
+    - Show total number of Recipes: <%= @recipe_count %> <br>
+    - Show total number of Ingredients: <%= @ingredient_count %> <br>
+
+    - Show total number of Recipes owned by each user <br>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Analytic', new_analytic_path %>
