@@ -10,5 +10,10 @@
   </ul>
 </p>
 
+<%= form_for @user, url: add_user_recipe_path do |f| %>
+  <%= collection_select(:recipe, :name, Recipe.all, :id, :name) %>
+  <%= f.submit "Add Recipe" %>
+<% end %>
+
 <%= link_to 'Edit', edit_user_path(@user) %>
 <%= link_to 'Back', users_path %>
