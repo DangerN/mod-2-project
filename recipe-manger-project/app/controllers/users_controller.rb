@@ -59,7 +59,11 @@ class UsersController < ApplicationController
   end
 
   def remove_user_recipe
-    byebug
+
+    prams = params[:id].split('+')
+    yeet = UserRecipe.where('user_id = ? AND recipe_id = ?', prams.last, Recipe.find_by(name: prams.first).id)
+    UserRecipe.destroy(yeet.ids)
+    redirect_to user_path(prams.last)
   end
 
   # DELETE /users/1
