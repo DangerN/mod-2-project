@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get 'recipe_ingredients/:id', to: 'recipes#ingredients_form', as: 'ingredients_form'
   post 'recipe_ingredients/:id', to: 'recipes#change_recipe_ingredients'
   patch 'add_user_recipe/:id', to: 'users#add_user_recipe', as: 'add_user_recipe'
+  delete 'remove_user_recipe/:id', to: 'users#remove_user_recipe', as: 'remove_user_recipe'
 
 end

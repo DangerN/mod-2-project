@@ -5,7 +5,7 @@
   <%= @user.name %>
   <ul>
     <% UserRecipe.recipe_names(params[:id].to_i).each do |recipe| %>
-      <li><%= link_to "#{recipe}", recipe_path(Recipe.find_by(name: recipe))%></li>
+      <li><%= link_to "#{recipe}", recipe_path(Recipe.find_by(name: recipe))%><%= link_to "Remove", remove_user_recipe_path, method: :delete,  data: {confirm: "yeet"} %></li>
     <%end%>
   </ul>
 </p>

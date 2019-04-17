@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   def add_user_recipe
     # byebug
     UserRecipe.create(user_id: params[:id], recipe_id: params[:recipe][:name])
-    redirect_to users_path
+    redirect_to user_path
   end
 
   # POST /users
@@ -56,6 +56,10 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def remove_user_recipe
+    byebug
   end
 
   # DELETE /users/1
