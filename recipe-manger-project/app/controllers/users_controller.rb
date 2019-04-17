@@ -22,6 +22,12 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def add_user_recipe
+    # byebug
+    UserRecipe.create(user_id: params[:id], recipe_id: params[:recipe][:name])
+    redirect_to users_path
+  end
+
   # POST /users
   # POST /users.json
   def create
