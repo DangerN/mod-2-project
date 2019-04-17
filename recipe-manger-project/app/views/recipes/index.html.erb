@@ -12,21 +12,23 @@
   <%= submit_tag("Search") %>
   <%end%> <br>
 
-      <div class="row">
+
+      <div class="row justify-content-md-center">
 
         <% @recipes.each do |recipe| %>
         <tr>
-          <div class="card col-md-4" style="width: 18rem;">
-          <img class="card-img-top" src=<%= recipe.html_link %> alt="Card image cap">
+          <div class="card col-md-3 mt-2 border border-dark rounded" style="width: 16rem;">
+          <img class="card-img-top border border-dark rounded" src=<%= recipe.html_link %> alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title"><%= recipe.name %></h5>
               <p class="card-text"><%= recipe.directions %></p>
-              <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <%= link_to 'Show', recipe , class:"btn btn-primary btn-sm"%>
-              <%= link_to 'Edit', edit_recipe_path(recipe), class:"btn btn-primary btn-sm" %>
-              <%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary btn-sm" %>
-              <%= link_to 'Edit Ingredients', ingredients_form_path(recipe), class:"btn btn-primary btn-sm" %>
-              </div>
+
+            </div>
+            <div class="btn-group" id="recipe_card_button" data-toggle="buttons">
+            <%= link_to 'Show', recipe , class:"btn btn-primary btn-sm"%>
+            <%= link_to 'Edit', edit_recipe_path(recipe), class:"btn btn-primary btn-sm" %>
+            <%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary btn-sm" %>
+            <%= link_to 'Edit Ingredients', ingredients_form_path(recipe), class:"btn btn-primary btn-sm" %>
             </div>
           </div>
         </tr>
