@@ -80,6 +80,10 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
+  def search
+    @user = User.search(params[:search])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
@@ -88,6 +92,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :directions, :html_link)
+      params.require(:recipe).permit(:name, :directions)
     end
 end
