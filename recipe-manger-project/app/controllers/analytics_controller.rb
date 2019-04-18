@@ -7,6 +7,7 @@ class AnalyticsController < ApplicationController
     @user_count = calculate_user_count
     @recipe_count = calculate_recipe_count
     @ingredient_count = calculate_ingredient_count
+    @favorite_recipe = Recipe.most_popular
   end
 
   #methods to use in index above:
@@ -21,6 +22,5 @@ class AnalyticsController < ApplicationController
   def calculate_ingredient_count
     Ingredient.all.count
   end
-  #def calculate_recipe_count_by_owner(user)
 
 end

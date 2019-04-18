@@ -28,7 +28,9 @@
       </div>
 
       <div class="card col-md-3 mt-2 border border-dark rounded" style="width: 16rem;">
-      <img class="card-img-top border border-dark rounded" src="" alt="Card image cap">
+      <a href=<%=recipe_path(@favorite_recipe)%>>
+        <img class="card-img-top border border-dark rounded" src=<%=@favorite_recipe.html_link%> alt="Card image cap">
+      </a>
         <div class="card-body">
           <h5 class="card-title text-center">Favorite Recipe </h5>
         </div>
