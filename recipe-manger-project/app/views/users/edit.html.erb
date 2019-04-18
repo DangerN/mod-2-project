@@ -1,6 +1,11 @@
+<div class="container">
+
 <h1>Editing User</h1>
 
 <%= render 'form', user: @user %>
+<div class="text-light">
+  <%= link_to 'Show', @user, class: "text-light" %> |
+  <%= link_to 'Back', users_path , class: "text-light"%>
+</div>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+</div>
