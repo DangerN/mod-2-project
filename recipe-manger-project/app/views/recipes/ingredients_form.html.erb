@@ -1,7 +1,17 @@
-yeet
-<h2><%= @recipe.name %></h2>
+<div class="container">
 
-<%= form_for :recipe do |f| %>
-<%= collection_check_boxes(:ingredient, :name, @ingredients, :id, :name) %>
-<%= f.submit %>
-<%end%>
+<h1 class="text-light"><%= @recipe.name %></h1>
+
+<ul>
+  <%= form_for :recipe do |f| %>
+    <li class="text-light">
+    <%= collection_check_boxes(:ingredient, :name, @ingredients, :id, :name) do |b| %>
+    <%= b.check_box%>
+    <%= b.label%><br>
+    <%end%>
+    </li>
+  <%= f.submit class: "btn btn-success"%>
+  <%end%>
+</ul>
+
+</div>
