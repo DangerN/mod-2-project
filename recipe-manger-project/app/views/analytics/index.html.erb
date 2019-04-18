@@ -1,24 +1,53 @@
+<div class="container">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Analytics</h1>
+<h1 class="text-light">Analytics</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class="row justify-content-md-center">
 
-  <tbody>
-    Analytic stuff goes on this page <br>
-    - Show total number of Users:<%= @user_count %> <br>
-    - Show total number of Recipes: <%= @recipe_count %> <br>
-    - Show total number of Ingredients: <%= @ingredient_count %> <br>
+      <div class="card col-md-3 mt-2 border border-dark rounded" style="width: 16rem;">
+        <div class="card-body">
+          <h1 class="card-title text-center"><%= @user_count %></h1>
+        </div>
+        <h5 class="card-text text-center">User Count</h5>
+      </div>
 
-    - Show total number of Recipes owned by each user <br>
-    - Most popular recipe
-    - Most used ingredient
-  </tbody>
-</table>
+      <div class="card col-md-3 mt-2 border border-dark rounded" style="width: 16rem;">
+        <div class="card-body">
+          <h1 class="card-title text-center"><%= @recipe_count %></h1>
+        </div>
+        <h5 class="card-text text-center">Recipe Count</h5>
+      </div>
 
+      <div class="card col-md-3 mt-2 border border-dark rounded" style="width: 16rem;">
+        <div class="card-body">
+          <h1 class="card-title text-center"><%= @ingredient_count %></h1>
+        </div>
+        <h5 class="card-text text-center">Ingredient Count</h5>
+      </div>
+
+      <div class="card col-md-3 mt-2 border border-dark rounded" style="width: 16rem;">
+      <img class="card-img-top border border-dark rounded" src="" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">Favorite Recipe </h5>
+        </div>
+      </div>
+
+      <div class="card col-md-3 mt-2 border border-dark rounded" style="width: 16rem;">
+      <img class="card-img-top border border-dark rounded" src="" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">Most Used Ingredient </h5>
+        </div>
+      </div>
+
+      <div class="card col-md-3 mt-2 border border-dark rounded" style="width: 16rem;">
+        <div class="card-body">
+          <h1 class="card-title text-center">User goes here</h1>
+        </div>
+        <h5 class="card-text text-center">Most Active User</h5>
+      </div>
+
+    </div>
 <br>
+</div>

@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="text-light">
   <strong>Name:</strong>
   <%= @recipe.name %>
 </p>
-<strong>Ingredients:</strong>
+<strong class="text-light">Ingredients:</strong>
 <ul>
   <% RecipeIngredient.ingredient_names(params[:id].to_i).each do |ingredient| %>
     <li><%= link_to "#{ingredient}", ingredient_path(Ingredient.find_by(name: ingredient))%></li>
   <%end%>
 </ul>
 
-<p>
+<p class="text-light">
   <strong>Directions:</strong>
   <%= @recipe.directions %>
 </p>
