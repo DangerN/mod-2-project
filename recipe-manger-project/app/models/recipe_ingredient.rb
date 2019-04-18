@@ -11,4 +11,14 @@ class RecipeIngredient < ApplicationRecord
     end
   end
 
+
+  def self.get_all_ingredient_ids
+    self.all.map{ |recipe_ingredient| recipe_ingredient.ingredient_id}
+  end
+
+  def self.most_popular_ingredient_id
+    ingredient_ids = RecipeIngredient.get_all_ingredient_ids
+    ingredient_ids.uniq.max_by{ |i| ingredient_ids.count( i ) }
+  end
+
 end
