@@ -20,10 +20,10 @@
 
             </div>
             <div class="btn-group" id="recipe_card_button" data-toggle="buttons">
-            <%= link_to 'Show', recipe , class:"btn btn-secondary btn-sm"%>
-            <%= link_to 'Edit', edit_recipe_path(recipe), class:"btn btn-secondary btn-sm" %>
-            <%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-secondary btn-sm" %>
-            <%= link_to 'Edit Ingredients', ingredients_form_path(recipe), class:"btn btn-secondary btn-sm" %>
+            <%= link_to 'Show', recipe , class:"btn btn-warning btn-sm", id:"edit-card-button"%>
+            <%= link_to 'Edit', edit_recipe_path(recipe), class:"btn btn-warning btn-sm", id:"edit-card-button" %>
+            <%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-warning btn-sm" , id:"edit-card-button"%>
+            <%= link_to 'Edit Ingredients', ingredients_form_path(recipe), class:"btn btn-warning btn-sm" %>
             </div>
           </div>
         </tr>
