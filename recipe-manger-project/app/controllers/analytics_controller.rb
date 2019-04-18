@@ -8,6 +8,8 @@ class AnalyticsController < ApplicationController
     @recipe_count = calculate_recipe_count
     @ingredient_count = calculate_ingredient_count
     @favorite_recipe = Recipe.most_popular
+    @most_used_ingredient = Ingredient.in_most_recipes
+    @most_active_user = User.most_active
   end
 
   #methods to use in index above:

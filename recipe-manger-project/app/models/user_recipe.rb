@@ -18,9 +18,9 @@ class UserRecipe < ApplicationRecord
     end
   end
 
-  def self.get_count_by_recipe_id(recipe_id)
-    self.all.select{ |user_recipe| user_recipe.recipe_id == recipe_id}.count
-  end
+  # def self.get_count_by_recipe_id(recipe_id)
+  #   self.all.select{ |user_recipe| user_recipe.recipe_id == recipe_id}.count
+  # end
 
   def self.get_all_recipe_ids
     self.all.map{ |user_recipe| user_recipe.recipe_id}
@@ -30,5 +30,15 @@ class UserRecipe < ApplicationRecord
     recipe_ids = UserRecipe.get_all_recipe_ids
     recipe_ids.uniq.max_by{ |i| recipe_ids.count( i ) }
   end
+
+  def self.get_all_user_ids
+    self.all.map{ |user_recipe| user_recipe.user_id}
+  end
+
+  def self.most_popular_user_id
+    user_ids = UserRecipe.get_all_user_ids
+    user_ids.uniq.max_by{ |i| user_ids.count( i ) }
+  end
+
 
 end
