@@ -1,26 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Ingredients</h1>
+<div class="row justify-content-md-center">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @ingredients.each do |ingredient| %>
-      <tr>
-        <td><%= ingredient.name %></td>
-        <td><%= link_to 'Show', ingredient %></td>
-        <td><%= link_to 'Edit', edit_ingredient_path(ingredient) %></td>
-        <td><%= link_to 'Destroy', ingredient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+<% @ingredients.each do |ingredient| %>
+<tr>
+  <div class="card col-md-3 mt-2 border border-dark rounded" style="width: 16rem;">
+  <img class="card-img-top border border-dark rounded" src=<%= ingredient.html_link %> alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= ingredient.name %></h5>
+      <p class="card-text"><%= ingredient.description %></p>
+
+    </div>
+    <div class="btn-group" id="recipe_card_button" data-toggle="buttons">
+    <%= link_to 'Show More', ingredient , class:"btn btn-primary btn-sm"%>
+    </div>
+  </div>
+</tr>
+<% end %>
+</div>
+
+
 
 <br>
 
