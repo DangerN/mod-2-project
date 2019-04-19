@@ -17,9 +17,9 @@
       <tr>
         <td class="text-light"><%= user.name %></td>
         <div class="btn-group" id="user-index-button-group" data-toggle="buttons">
-        <td><%= link_to 'Show', user, class:"btn btn-warning btn-sm" %></td>
-        <td><%= link_to 'Edit', edit_user_path(user), class:"btn btn-warning btn-sm" %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-warning btn-sm" %></td>
+        <td><%= link_to 'Details', user, class:"btn btn-warning btn-sm" %></td>
+        <td><%= link_to 'Change Name', edit_user_path(user), class:"btn btn-warning btn-sm" %></td>
+        <td><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-warning btn-sm" %></td>
         </div>
       </tr>
     <% end %>
