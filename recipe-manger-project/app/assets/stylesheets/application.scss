@@ -23,6 +23,8 @@
    background-image: url("http://grandtheatrecompany.com/wp-content/uploads/2016/05/img_3.jpg");
    background-repeat: no-repeat;
    background-attachment: fixed;
+   height: 100vh;
+   margin-bottom: 50px;
  }
 
 .card {
@@ -55,6 +57,7 @@ img {
     width: 100%;
     line-height: 60px;
     background-color: rgba(169, 169, 169, 0.6);
+    text-align: left;
  }
 
  #search-bar{
@@ -106,4 +109,9 @@ img {
 
 #user_recipe_list{
   text-shadow: 2px 2px #000000;
+}
+#footer-container-text{
+  color: white;
+  line-height: 30px;
+  margin-left: 20px;
 }

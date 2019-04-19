@@ -1,13 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="container align-items-center">
 
-<p class="text-light">
-  <strong>Name:</strong>
+<p id="notice"><%= notice %></p>
+<h1 class="text-light">
   <%= @recipe.name %>
-</p>
+</h1>
 <strong class="text-light">Ingredients:</strong>
 <ul>
   <% RecipeIngredient.ingredient_names(params[:id].to_i).each do |ingredient| %>
-    <li><%= link_to "#{ingredient}", ingredient_path(Ingredient.find_by(name: ingredient))%></li>
+    <li class= "text-light"><%= link_to "#{ingredient}", ingredient_path(Ingredient.find_by(name: ingredient)), class: "text-light"%></li>
   <%end%>
 </ul>
 
@@ -16,9 +16,7 @@
   <%= @recipe.directions %>
 </p>
 
-
-
-<%= link_to 'Edit', edit_recipe_path(@recipe) %>
-<%= link_to 'Back', recipes_path %>
-<br>
-<img src="<%= @recipe.html_link %>" alt="Recipe Image">
+<img src="<%= @recipe.html_link %>" alt="Recipe Image"><br>
+<%= link_to 'Edit', edit_recipe_path(@recipe), class: "text-light" %> |
+<%= link_to 'Back', recipes_path, class: "text-light" %>
+</div>
