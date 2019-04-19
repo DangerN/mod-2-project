@@ -8,21 +8,21 @@ awesome when someone starts to use it.
 
 ## Installing / Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+Clone project to a directory of your choosing
 
 ```shell
-packagemanager install awesome-project
-awesome-project start
-awesome-project "Do something!"  # prints "Nah."
+git clone git@github.com:DangerN/mod-2-project.git
 ```
-
-Here you should say what actually happens when you execute the code above.
 
 ### Initial Configuration
 
-Some projects require initial configuration (e.g. access tokens or keys, `npm i`).
-This is the section where you would document those requirements.
+run 'bundle install' to install all required gems
+run rails s to start server locally
+
+```
+bundle install
+rails s
+```
 
 ## Developing
 
@@ -30,26 +30,11 @@ Here's a brief intro about what a developer must do in order to start developing
 the project further:
 
 ```shell
-git clone https://github.com/your/awesome-project.git
-cd awesome-project/
-packagemanager install
+git clone git@github.com:DangerN/mod-2-project.git
+cd mod-2-project/
+bundle install
 ```
 
-And state what happens step-by-step.
-
-### Building
-
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here:
-
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed.
 
 ### Deploying / Publishing
 
@@ -65,14 +50,10 @@ And again you'd need to tell what the previous code actually does.
 ## Features
 
 What's all the bells and whistles this project can perform?
-* What's the main functionality
-* You can also do another thing
-* If you get really randy, you can even do this
+* Add Ingredients to recipes to keep track of what you're cooking
+* Add collections of recipes to a user to keep track of your favorite recipes
+* Edit and Update existing recipes and ingredients if you see something wrong or would like to add content
 
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when
-using the project.
 
 #### Argument 1
 Type: `String`  
